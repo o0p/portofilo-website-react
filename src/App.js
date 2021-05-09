@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
 
 const url = 'https://course-api.com/react-tabs-project';
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
@@ -13,8 +14,19 @@ function App() {
     setJobs(newJobs);
     setLoading(false);
   };
+  useEffect(() => {
+    fetchJobs();
+  }, []);
 
-  return <h2>tabs project setup</h2>;
+  if (loading) {
+    return (
+      <section className="section loading">
+        <h1>loading...</h1>
+      </section>
+    );
+  }
+
+  return <h2>jobs</h2>;
 }
 
 export default App;
