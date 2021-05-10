@@ -34,6 +34,15 @@ function App() {
         <h2>expirience</h2>
         <div className="underline"></div>
       </div>
+      <div className="jobs-center">
+        {/* {btn} */}
+        {/* {job info} */}
+        <article className="job-info">
+          <h3>{title}</h3>
+          <h4>{company}</h4>
+          <p className="job-date">{dates}</p>
+        </article>
+      </div>
     </section>
   );
 }
