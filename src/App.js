@@ -26,6 +26,8 @@ function App() {
     );
   }
 
+  const { company, dates, duties, title } = jobs[value];
+
   return <h2>jobs</h2>;
 }
 
